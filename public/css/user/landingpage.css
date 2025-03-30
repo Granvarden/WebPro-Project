@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@100;200;300;400;500;600;700;800;900&family=PT+Serif+Caption:ital@0;1&family=Quintessential&display=swap');
+.bar {
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #A6855D;
+    align-items: center;
+    
+}
+
+.links a{
+    font-size: 30px;
+    color: #0D0D0D;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+}   
+
+.bg{
+    margin: 0;
+}
+    
+
+.logo{
+    color: black;
+    font-size: 70px;
+    font-weight: bold;
+    font-family: "PT Serif Caption", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.links a:hover{
+    background-color: black;
+    color: antiquewhite;
+}
+
+.bg {
+    background-image: url('/image/landing_bg.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+
+
+
+.container {
+    text-align: center;
+    margin-top: 15%;
+    color: #F2CA99;
+    max-height: 1080px;
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container h1 {
+    font-size: 128px;
+    font-family: "PT Serif Caption", serif;
+    font-weight: bold;
+    font-style: normal;
+    margin: 0;
+}
+
+.container h3 {
+    font-size: 30px;
+    margin-bottom: 5%;
+    font-style: italic;
+    letter-spacing: 1px;
+    color: #A6855D;
+}
+
+.container a {
+    text-align: center;
+    padding-top: 15px;
+    margin-top: 5%;
+    font-size: 20px;
+    padding: 15px 30px;
+    color: black;
+    text-decoration: none;
+    background: #F2CA99;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.container a:hover {
+    color: black;
+    text-decoration: none;
+    background: #A6855D;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}

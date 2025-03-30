@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลลูกค้า</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/admin/nav_admin.css">
+    <link rel="stylesheet" href="/css/admin/admin_template.css">
+    <style>
+        .btn{
+            border-radius: 5px;
+            background-color: #F2CA99;
+            padding: 4px;
+            text-decoration: none;
+            color: black;
+            
+        }
+        .btn:hover{
+            background-color: #A6855D;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('admin_nav') %>
+        <div class="container-fluid">
+            <h1 style="color: antiquewhite;">ข้อมูลลูกค้า</h1>
+            <table class="table table-hover table-striped table-bordered table-dark">
+                <thead>
+                    <tr>
+                        <th>รหัสลูกค้า</th>
+                        <th>ชื่อ</th>
+                        <th>นามสกุล</th>
+                        <th>เบอร์โทรศัพท์</th>
+                        <th>อีเมล</th>
+                        <th>การดำเนินการ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if (customers.length> 0) { %>
+                        <% customers.forEach((customer)=> { %>
+                            <tr>
+                                <td>
+                                    <%= customer.CustomerID %>
+                                </td>
+                                <td>
+                                    <%= customer.FirstName %>
+                                </td>
+                                <td>
+                                    <%= customer.LastName %>
+                                </td>
+                                <td>
+                                    <%= customer.PhoneNumber %>
+                                </td>
+                                <td>
+                                    <%= customer.Email %>
+                                </td>
+                                <td>
+                                    <!-- ปุ่มดูประวัติการนัด -->
+                                    <a href="/admin/customer_appointments/<%= customer.CustomerID %>" class="btn">ดูประวัติการนัด</a>
+                                </td>
+                            </tr>
+                            <% }); %>
+                        <% } else { %>
+                            <tr>
+                                <td colspan="6" style="text-align: center; font-size: 24px;">ยังไม่มีข้อมูล</td>
+                            </tr>
+                            <% } %>
+                </tbody>
+            </table>
+        </div>
+</body>
+
+</html>
